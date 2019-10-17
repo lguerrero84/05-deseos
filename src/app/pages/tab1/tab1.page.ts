@@ -16,7 +16,8 @@ export class Tab1Page {
   }
 
   agregarLista() {
-    this.route.navigateByUrl('/tabs/tab1/agregar');
+     this.route.navigateByUrl('/tabs/tab1/agregar');
+  // this.route.navigateByUrl('/agregar');
   }
 
 }
