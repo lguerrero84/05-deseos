@@ -11,7 +11,7 @@ import { Lista } from '../../models/lista.model';
 })
 export class ListasComponent implements OnInit {
 
-  @ViewChild( IonList ) lista: IonList;
+  @ViewChild ( IonList , {static:true} )lista: IonList;
   @Input() terminada = true;
 
 
@@ -56,6 +56,7 @@ export class ListasComponent implements OnInit {
          handler: (data) => {
            lista.titulo = data.titulo;
               this.deseosService.guardarStorage();
+              this.lista.closeSlidingItems();
          }
        }]
     });
